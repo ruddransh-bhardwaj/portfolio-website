@@ -2,25 +2,46 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Ruddransh Bhardwaj | Portfolio</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
 
-    <!-- Google Font -->
+    <title>
+        Ruddransh Bhardwaj | AI & Full Stack Developer
+    </title>
+
+    <meta name="description"
+        content="Portfolio of Ruddransh Bhardwaj — AI, Machine Learning, Data Science & Full Stack Developer." />
+
+    <meta name="keywords"
+        content="Ruddransh Bhardwaj, AI, ML, Developer, Portfolio, Full Stack, Data Science" />
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
     <style>
         :root {
-            --primary: #60a5fa;
-            --secondary: #c084fc;
+
+            --primary: #93c5fd;
+
+            --secondary: #d8b4fe;
 
             --bg: #050816;
 
-            --card: rgba(15, 23, 42, 0.72);
+            --card:
+                rgba(15, 23, 42, 0.72);
 
-            --border: rgba(255, 255, 255, 0.08);
+            --border:
+                rgba(255, 255, 255, 0.08);
 
             --text: #f8fafc;
 
@@ -28,19 +49,20 @@
         }
 
         * {
+
             margin: 0;
+
             padding: 0;
+
             box-sizing: border-box;
+
             font-family: 'Poppins', sans-serif;
         }
 
         html {
+
             scroll-behavior: smooth;
         }
-
-        /* =========================================
-BODY
-========================================= */
 
         body {
 
@@ -57,13 +79,7 @@ BODY
             position: relative;
 
             -webkit-font-smoothing: antialiased;
-
-            text-rendering: optimizeLegibility;
         }
-
-        /* =========================================
-ANIMATED BACKGROUND
-========================================= */
 
         body::before {
 
@@ -80,86 +96,30 @@ ANIMATED BACKGROUND
 
                 radial-gradient(circle at 80% 30%,
                     rgba(192, 132, 252, 0.10),
-                    transparent 25%),
-
-                radial-gradient(circle at 50% 80%,
-                    rgba(255, 255, 255, 0.03),
                     transparent 25%);
 
-            animation: bgMove 14s infinite alternate ease-in-out;
+            animation:
+                bgMove 15s infinite alternate ease-in-out;
 
             z-index: -5;
         }
 
         @keyframes bgMove {
 
-            0% {
-                transform: scale(1) translateY(0px);
-            }
-
-            100% {
-                transform: scale(1.05) translateY(-25px);
-            }
-        }
-
-        /* =========================================
-GLOW EFFECTS
-========================================= */
-
-        .glow {
-
-            position: fixed;
-
-            border-radius: 50%;
-
-            opacity: 0.12;
-
-            z-index: -4;
-
-            pointer-events: none;
-
-            animation:
-                floatGlow 12s infinite alternate ease-in-out;
-        }
-
-        .glow1 {
-
-            width: 280px;
-            height: 280px;
-
-            background: #2563eb;
-
-            top: -120px;
-            left: -120px;
-        }
-
-        .glow2 {
-
-            width: 240px;
-            height: 240px;
-
-            background: #7c3aed;
-
-            bottom: -120px;
-            right: -100px;
-
-            animation-delay: 3s;
-        }
-
-        @keyframes floatGlow {
-
             from {
-                transform: translateY(0px) translateX(0px);
+
+                transform:
+                    scale(1)
+                    translateY(0px);
             }
 
             to {
-                transform: translateY(40px) translateX(25px);
+
+                transform:
+                    scale(1.06)
+                    translateY(-25px);
             }
         }
-
-        /* =========================================
-PARTICLES
-========================================= */
 
         .particles {
 
@@ -169,7 +129,7 @@ PARTICLES
 
             overflow: hidden;
 
-            z-index: -3;
+            z-index: -4;
         }
 
         .particles span {
@@ -181,25 +141,28 @@ PARTICLES
             border-radius: 50%;
 
             background:
-                rgba(255, 255, 255, 0.45);
+                rgba(255, 255, 255, 0.35);
 
-            animation: particles linear infinite;
+            animation:
+                particles linear infinite;
         }
 
         @keyframes particles {
 
             from {
-                transform: translateY(100vh) scale(0);
+
+                transform:
+                    translateY(100vh)
+                    scale(0);
             }
 
             to {
-                transform: translateY(-10vh) scale(1);
+
+                transform:
+                    translateY(-10vh)
+                    scale(1);
             }
         }
-
-        /* =========================================
-NAVBAR
-========================================= */
 
         nav {
 
@@ -214,14 +177,12 @@ NAVBAR
             padding: 18px 0;
 
             background:
-                rgba(5, 8, 22, 0.72);
+                rgba(5, 8, 22, 0.75);
 
             backdrop-filter: blur(8px);
 
-            -webkit-backdrop-filter: blur(8px);
-
             border-bottom:
-                1px solid rgba(255, 255, 255, 0.08);
+                1px solid rgba(255, 255, 255, 0.06);
         }
 
         nav ul {
@@ -230,9 +191,11 @@ NAVBAR
 
             justify-content: center;
 
-            gap: 38px;
+            gap: 35px;
 
             list-style: none;
+
+            flex-wrap: wrap;
         }
 
         nav a {
@@ -245,7 +208,7 @@ NAVBAR
 
             position: relative;
 
-            transition: 0.35s ease;
+            transition: 0.3s ease;
         }
 
         nav a::after {
@@ -267,7 +230,7 @@ NAVBAR
                     var(--primary),
                     var(--secondary));
 
-            transition: 0.4s ease;
+            transition: 0.35s ease;
         }
 
         nav a:hover::after {
@@ -277,12 +240,8 @@ NAVBAR
 
         nav a:hover {
 
-            color: #d8b4fe;
+            color: #e9d5ff;
         }
-
-        /* =========================================
-HERO
-========================================= */
 
         #hero {
 
@@ -298,14 +257,13 @@ HERO
 
             text-align: center;
 
-            position: relative;
-
             padding: 20px;
         }
 
         .hero-content {
 
-            animation: heroFade 1.4s ease forwards;
+            animation:
+                heroFade 1.4s ease forwards;
         }
 
         @keyframes heroFade {
@@ -314,20 +272,22 @@ HERO
 
                 opacity: 0;
 
-                transform: translateY(60px);
+                transform:
+                    translateY(60px);
             }
 
             to {
 
                 opacity: 1;
 
-                transform: translateY(0px);
+                transform:
+                    translateY(0px);
             }
         }
 
         #hero h1 {
 
-            font-size: 5.3rem;
+            font-size: 5rem;
 
             font-weight: 800;
 
@@ -337,8 +297,8 @@ HERO
 
             background:
                 linear-gradient(to right,
-                    #93c5fd,
-                    #d8b4fe);
+                    #bfdbfe,
+                    #e9d5ff);
 
             -webkit-background-clip: text;
 
@@ -347,7 +307,7 @@ HERO
 
         #hero p {
 
-            max-width: 760px;
+            max-width: 800px;
 
             color: var(--muted);
 
@@ -356,14 +316,18 @@ HERO
             line-height: 1.9;
         }
 
-        .hero-btn {
+        .hero-buttons {
 
             margin-top: 40px;
-        }
 
-        /* =========================================
-BUTTONS
-========================================= */
+            display: flex;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+        }
 
         button {
 
@@ -382,78 +346,30 @@ BUTTONS
 
             font-weight: 600;
 
-            letter-spacing: 0.3px;
-
             cursor: pointer;
 
-            transition: all 0.35s ease;
-
-            backdrop-filter: blur(10px);
-
-            -webkit-backdrop-filter: blur(10px);
+            transition: 0.35s ease;
 
             box-shadow:
-                0 10px 30px rgba(255, 255, 255, 0.06),
-                inset 0 1px 1px rgba(255, 255, 255, 0.7);
+                0 10px 25px rgba(255, 255, 255, 0.08);
         }
 
         button:hover {
 
             transform:
-                translateY(-5px) scale(1.03);
+                translateY(-5px);
 
-            background: #ffffff;
-
-            box-shadow:
-                0 15px 35px rgba(255, 255, 255, 0.12);
+            background: white;
         }
-
-        button:active {
-
-            transform: scale(0.98);
-        }
-
-        /* =========================================
-SCROLL ICON
-========================================= */
-
-        .scroll-down {
-
-            position: absolute;
-
-            bottom: 35px;
-
-            font-size: 2rem;
-
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(10px);
-            }
-        }
-
-        /* =========================================
-SECTIONS
-========================================= */
 
         .section {
 
-            padding: 130px 10%;
-
-            position: relative;
+            padding: 120px 10%;
         }
 
         .section h2 {
 
-            font-size: 2.7rem;
+            font-size: 2.6rem;
 
             margin-bottom: 55px;
 
@@ -472,9 +388,9 @@ SECTIONS
 
             height: 4px;
 
-            left: 0;
-
             bottom: -12px;
+
+            left: 0;
 
             border-radius: 10px;
 
@@ -483,45 +399,6 @@ SECTIONS
                     var(--primary),
                     var(--secondary));
         }
-
-        /* =========================================
-LISTS
-========================================= */
-
-        .bullet-list {
-
-            list-style: none;
-        }
-
-        .bullet-list li {
-
-            margin-bottom: 18px;
-
-            color: var(--muted);
-
-            font-size: 1.08rem;
-
-            line-height: 1.8;
-
-            position: relative;
-
-            padding-left: 30px;
-        }
-
-        .bullet-list li::before {
-
-            content: '✦';
-
-            position: absolute;
-
-            left: 0;
-
-            color: #d8b4fe;
-        }
-
-        /* =========================================
-CARDS
-========================================= */
 
         .projects-grid {
 
@@ -536,11 +413,7 @@ CARDS
 
         .card {
 
-            position: relative;
-
-            overflow: hidden;
-
-            background: rgba(15, 23, 42, 0.72);
+            background: var(--card);
 
             border:
                 1px solid rgba(255, 255, 255, 0.08);
@@ -551,67 +424,86 @@ CARDS
 
             backdrop-filter: blur(10px);
 
-            -webkit-backdrop-filter: blur(10px);
-
-            transition: 0.5s ease;
-        }
-
-        .card::before {
-
-            content: '';
-
-            position: absolute;
-
-            width: 180px;
-
-            height: 180px;
-
-            border-radius: 50%;
-
-            background:
-                rgba(255, 255, 255, 0.03);
-
-            top: -70px;
-
-            right: -70px;
+            transition: 0.45s ease;
         }
 
         .card:hover {
 
-            transform: translateY(-14px);
+            transform:
+                translateY(-12px);
 
             border-color:
                 rgba(255, 255, 255, 0.20);
 
             box-shadow:
-                0 25px 50px rgba(0, 0, 0, 0.35);
+                0 20px 40px rgba(0, 0, 0, 0.35);
         }
 
         .card h3 {
 
-            font-size: 1.35rem;
+            margin-bottom: 18px;
 
-            margin-bottom: 16px;
+            font-size: 1.3rem;
         }
 
-        /* =========================================
-CONTACT
-========================================= */
+        .bullet-list {
+
+            list-style: none;
+        }
+
+        .bullet-list li {
+
+            position: relative;
+
+            padding-left: 28px;
+
+            margin-bottom: 16px;
+
+            color: var(--muted);
+
+            line-height: 1.8;
+        }
+
+        .bullet-list li::before {
+
+            content: '✦';
+
+            position: absolute;
+
+            left: 0;
+
+            color: #d8b4fe;
+        }
+
+        .reveal {
+
+            opacity: 0;
+
+            transform:
+                translateY(80px);
+
+            transition:
+                all 1s cubic-bezier(.17, .55, .55, 1);
+        }
+
+        .reveal.active {
+
+            opacity: 1;
+
+            transform:
+                translateY(0px);
+        }
 
         .contact-box {
 
-            background: rgba(15, 23, 42, 0.72);
+            background: var(--card);
 
             border:
                 1px solid rgba(255, 255, 255, 0.08);
 
-            padding: 45px;
-
             border-radius: 28px;
 
-            backdrop-filter: blur(10px);
-
-            -webkit-backdrop-filter: blur(10px);
+            padding: 45px;
         }
 
         .contact-content {
@@ -622,7 +514,7 @@ CONTACT
 
             opacity: 0;
 
-            transition: all 0.6s ease;
+            transition: 0.6s ease;
         }
 
         .contact-content.show {
@@ -631,16 +523,16 @@ CONTACT
 
             opacity: 1;
 
-            margin-top: 35px;
+            margin-top: 30px;
         }
 
         .contact-buttons {
 
             display: flex;
 
-            flex-wrap: wrap;
+            gap: 20px;
 
-            gap: 22px;
+            flex-wrap: wrap;
         }
 
         .contact-buttons a {
@@ -648,102 +540,33 @@ CONTACT
             text-decoration: none;
         }
 
-        .contact-btn {
+        footer {
 
-            min-width: 190px;
-        }
+            text-align: center;
 
-        /* =========================================
-SCROLL REVEAL
-========================================= */
+            padding: 40px 20px;
 
-        .reveal {
+            color: var(--muted);
 
-            opacity: 0;
-
-            transform: translateY(80px);
-
-            transition:
-                all 1s cubic-bezier(.17, .55, .55, 1);
-        }
-
-        .reveal.active {
-
-            opacity: 1;
-
-            transform: translateY(0px);
-        }
-
-        /* =========================================
-IOS SAFARI FIX
-========================================= */
-
-        @supports (-webkit-touch-callout: none) {
-
-            body {
-
-                background: #050816;
-            }
-
-            body::before {
-
-                opacity: 0.45;
-            }
-
-            .particles {
-
-                opacity: 0.45;
-            }
-
-            .card,
-            .contact-box,
-            nav {
-
-                backdrop-filter: blur(8px);
-
-                -webkit-backdrop-filter: blur(8px);
-            }
-        }
-
-        /* =========================================
-RESPONSIVE
-========================================= */
-
-        @media(max-width:900px) {
-
-            #hero h1 {
-
-                font-size: 4rem;
-            }
-
-            .section {
-
-                padding: 110px 7%;
-            }
+            border-top:
+                1px solid rgba(255, 255, 255, 0.06);
         }
 
         @media(max-width:768px) {
 
-            nav ul {
-
-                gap: 18px;
-
-                flex-wrap: wrap;
-            }
-
             #hero h1 {
 
-                font-size: 3rem;
+                font-size: 3.2rem;
             }
 
-            #hero p {
+            .section {
 
-                font-size: 1rem;
+                padding: 100px 7%;
             }
 
             .section h2 {
 
-                font-size: 2.2rem;
+                font-size: 2.1rem;
             }
 
             .contact-buttons {
@@ -751,25 +574,22 @@ RESPONSIVE
                 flex-direction: column;
             }
 
-            .contact-btn {
+            button {
 
                 width: 100%;
             }
         }
     </style>
+
 </head>
 
 <body>
 
-    <!-- Glow Effects -->
-    <div class="glow glow1"></div>
-
-    <div class="glow glow2"></div>
-
-    <!-- Particles -->
-    <div class="particles" id="particles"></div>
+    <div class="particles"
+        id="particles"></div>
 
     <!-- NAVBAR -->
+
     <nav>
 
         <ul>
@@ -778,11 +598,15 @@ RESPONSIVE
 
             <li><a href="#about">About</a></li>
 
+            <li><a href="#education">Education</a></li>
+
             <li><a href="#skills">Skills</a></li>
 
             <li><a href="#projects">Projects</a></li>
 
             <li><a href="#experience">Experience</a></li>
+
+            <li><a href="#achievements">Achievements</a></li>
 
             <li><a href="#contact">Contact</a></li>
 
@@ -791,22 +615,25 @@ RESPONSIVE
     </nav>
 
     <!-- HERO -->
+
     <section id="hero">
 
         <div class="hero-content">
 
             <h1>
-                Ruddransh
-                Bhardwaj
+                Ruddransh Bhardwaj
             </h1>
 
             <p>
-                3rd-Year B.Tech CSE Student specializing in
-                Artificial Intelligence, Machine Learning,
-                Data Science & Full Stack Development.
+
+                B.Tech CSE Student |
+                AI & Machine Learning Enthusiast |
+                Full Stack Developer |
+                Data Science Learner
+
             </p>
 
-            <div class="hero-btn">
+            <div class="hero-buttons">
 
                 <a href="#projects">
 
@@ -816,44 +643,103 @@ RESPONSIVE
 
                 </a>
 
+                <a href="https://github.com/call-me-ruddra"
+                    target="_blank">
+
+                    <button>
+                        GitHub Profile
+                    </button>
+
+                </a>
+
             </div>
 
-        </div>
-
-        <div class="scroll-down">
-            ↓
         </div>
 
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="section reveal">
+
+    <section id="about"
+        class="section reveal">
 
         <h2>About Me</h2>
 
         <ul class="bullet-list">
 
             <li>
-                Computer Science student focused on
-                AI, Machine Learning, and Data Science.
+                Passionate Computer Science Engineering student focused on Artificial Intelligence, Machine Learning, Data Science, and Full Stack Development.
             </li>
 
             <li>
-                Passionate about building modern,
-                scalable digital solutions.
+                Strong interest in solving real-world problems through modern technologies, scalable applications, and intelligent systems.
             </li>
 
             <li>
-                Active contributor to projects and
-                open-source technologies.
+                Active in development projects, coding challenges, technical communities, and open-source learning.
             </li>
 
         </ul>
 
     </section>
 
+    <!-- EDUCATION -->
+
+    <section id="education"
+        class="section reveal">
+
+        <h2>Education</h2>
+
+        <div class="projects-grid">
+
+            <div class="card">
+
+                <h3>
+                    VIT Bhopal University
+                </h3>
+
+                <ul class="bullet-list">
+
+                    <li>
+                        B.Tech in Computer Science & Engineering
+                    </li>
+
+                    <li>
+                        2nd Year Student
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h3>
+                    Academic Scores
+                </h3>
+
+                <ul class="bullet-list">
+
+                    <li>
+                        Class 12 — 75%
+                    </li>
+
+                    <li>
+                        Class 10 — 91.6%
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
     <!-- SKILLS -->
-    <section id="skills" class="section reveal">
+
+    <section id="skills"
+        class="section reveal">
 
         <h2>Technical Skills</h2>
 
@@ -861,7 +747,9 @@ RESPONSIVE
 
             <div class="card">
 
-                <h3>Programming</h3>
+                <h3>
+                    Programming Languages
+                </h3>
 
                 <ul class="bullet-list">
 
@@ -871,6 +759,10 @@ RESPONSIVE
 
                     <li>C++</li>
 
+                    <li>C</li>
+
+                    <li>JavaScript</li>
+
                     <li>SQL</li>
 
                 </ul>
@@ -879,17 +771,21 @@ RESPONSIVE
 
             <div class="card">
 
-                <h3>Web Development</h3>
+                <h3>
+                    Web Development
+                </h3>
 
                 <ul class="bullet-list">
 
-                    <li>HTML</li>
+                    <li>HTML5</li>
 
-                    <li>CSS</li>
+                    <li>CSS3</li>
 
-                    <li>JavaScript</li>
+                    <li>React.js</li>
 
-                    <li>React & Node.js</li>
+                    <li>Node.js</li>
+
+                    <li>Responsive Design</li>
 
                 </ul>
 
@@ -897,17 +793,19 @@ RESPONSIVE
 
             <div class="card">
 
-                <h3>Domains</h3>
+                <h3>
+                    Core Domains
+                </h3>
 
                 <ul class="bullet-list">
 
-                    <li>AI / ML</li>
+                    <li>Artificial Intelligence</li>
+
+                    <li>Machine Learning</li>
 
                     <li>Data Science</li>
 
                     <li>Data Structures</li>
-
-                    <li>Analytics</li>
 
                 </ul>
 
@@ -918,15 +816,19 @@ RESPONSIVE
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="section reveal">
 
-        <h2>Key Projects</h2>
+    <section id="projects"
+        class="section reveal">
+
+        <h2>Projects</h2>
 
         <div class="projects-grid">
 
             <div class="card">
 
-                <h3>Jarvis - AI Voice Assistant</h3>
+                <h3>
+                    Jarvis — AI Voice Assistant
+                </h3>
 
                 <ul class="bullet-list">
 
@@ -935,8 +837,7 @@ RESPONSIVE
                     </li>
 
                     <li>
-                        Automates tasks through
-                        intelligent voice commands.
+                        Processes voice commands and automates daily tasks.
                     </li>
 
                 </ul>
@@ -945,18 +846,18 @@ RESPONSIVE
 
             <div class="card">
 
-                <h3>Word Lookup Dictionary</h3>
+                <h3>
+                    Word Lookup Dictionary
+                </h3>
 
                 <ul class="bullet-list">
 
                     <li>
-                        Desktop application using
-                        Trie Data Structures.
+                        Developed using Trie Data Structures and Edit Distance Algorithms.
                     </li>
 
                     <li>
-                        Implements Edit Distance
-                        Algorithms.
+                        Enables fast and efficient word searching.
                     </li>
 
                 </ul>
@@ -965,18 +866,18 @@ RESPONSIVE
 
             <div class="card">
 
-                <h3>Customer Reviews Analytics</h3>
+                <h3>
+                    Customer Reviews Analytics
+                </h3>
 
                 <ul class="bullet-list">
 
                     <li>
-                        Statistical analysis of
-                        customer reviews.
+                        Statistical data analytics project studying user feedback.
                     </li>
 
                     <li>
-                        Shows impact of feedback
-                        on product growth.
+                        Analyzed relationship between reviews and product success.
                     </li>
 
                 </ul>
@@ -985,18 +886,18 @@ RESPONSIVE
 
             <div class="card">
 
-                <h3>Open Source Audit</h3>
+                <h3>
+                    Open Source Audit (OS-linux1)
+                </h3>
 
                 <ul class="bullet-list">
 
                     <li>
-                        GitHub-hosted Linux repository
-                        project.
+                        Open-source Linux auditing repository hosted on GitHub.
                     </li>
 
                     <li>
-                        Focused on system auditing
-                        and contributions.
+                        Focused on collaborative development and system analysis.
                     </li>
 
                 </ul>
@@ -1008,44 +909,128 @@ RESPONSIVE
     </section>
 
     <!-- EXPERIENCE -->
-    <section id="experience" class="section reveal">
 
-        <h2>Experience & Achievements</h2>
+    <section id="experience"
+        class="section reveal">
+
+        <h2>Experience & Internships</h2>
 
         <ul class="bullet-list">
 
             <li>
-                Web Developer Intern at Unstop
+                Python & Web Development Intern — Cognifyz Technologies
             </li>
 
             <li>
-                Python & Web Dev Intern at
-                Cognifyz Technologies
+                Web Developer Intern — Unstop
             </li>
 
             <li>
-                Participant in Google Cloud
-                Arcade 2026 Cohort 1
+                Participant — Google Cloud Arcade 2026 Cohort 1
             </li>
 
             <li>
-                Rajya Puraskar Awardee -
-                Bharat Scouts & Guides
+                Participated in IIT Bombay E-Summit (December 2025)
             </li>
 
         </ul>
 
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section reveal">
+    <!-- ACHIEVEMENTS -->
 
-        <h2>Get In Touch</h2>
+    <section id="achievements"
+        class="section reveal">
+
+        <h2>Achievements & Certifications</h2>
+
+        <div class="projects-grid">
+
+            <div class="card">
+
+                <h3>
+                    Certifications
+                </h3>
+
+                <ul class="bullet-list">
+
+                    <li>Python</li>
+
+                    <li>Microsoft Azure</li>
+
+                    <li>Wix AI</li>
+
+                    <li>Excel via Coursera</li>
+
+                    <li>Python Basic — HackerRank</li>
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h3>
+                    Coding & Technical Milestones
+                </h3>
+
+                <ul class="bullet-list">
+
+                    <li>
+                        Completed 43-Day Coding Challenge on Codeforces
+                    </li>
+
+                    <li>
+                        Active participant in technical communities and coding challenges
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h3>
+                    Sports & Leadership
+                </h3>
+
+                <ul class="bullet-list">
+
+                    <li>
+                        National-Level Hockey Player
+                    </li>
+
+                    <li>
+                        Regional-Level Football Player
+                    </li>
+
+                    <li>
+                        Rajya Puraskar Awardee — Bharat Scouts & Guides
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact"
+        class="section reveal">
+
+        <h2>
+            Get In Touch
+        </h2>
 
         <div class="contact-box">
 
             <button id="contactToggleBtn">
+
                 Show Contact Info
+
             </button>
 
             <div id="contactContent"
@@ -1055,7 +1040,7 @@ RESPONSIVE
 
                     <a href="mailto:bhardwajruddransh@gmail.com">
 
-                        <button class="contact-btn">
+                        <button>
                             Email Me
                         </button>
 
@@ -1064,7 +1049,7 @@ RESPONSIVE
                     <a href="https://www.linkedin.com/in/ruddransh-bhardwaj/"
                         target="_blank">
 
-                        <button class="contact-btn">
+                        <button>
                             LinkedIn
                         </button>
 
@@ -1073,7 +1058,7 @@ RESPONSIVE
                     <a href="https://github.com/call-me-ruddra"
                         target="_blank">
 
-                        <button class="contact-btn">
+                        <button>
                             GitHub
                         </button>
 
@@ -1087,16 +1072,23 @@ RESPONSIVE
 
     </section>
 
+    <!-- FOOTER -->
+
+    <footer>
+
+        Crafted with code, creativity & curiosity —
+        Ruddransh Bhardwaj
+
+    </footer>
+
     <script>
 
-        /* =========================================
-        PARTICLES
-        ========================================= */
+        /* PARTICLES */
 
         const particles =
             document.getElementById('particles');
 
-        for (let i = 0; i < 65; i++) {
+        for (let i = 0; i < 60; i++) {
 
             const particle =
                 document.createElement('span');
@@ -1125,9 +1117,7 @@ RESPONSIVE
             particles.appendChild(particle);
         }
 
-        /* =========================================
-        SCROLL REVEAL
-        ========================================= */
+        /* SCROLL REVEAL */
 
         const reveals =
             document.querySelectorAll('.reveal');
@@ -1151,9 +1141,7 @@ RESPONSIVE
 
         });
 
-        /* =========================================
-        CONTACT TOGGLE
-        ========================================= */
+        /* CONTACT TOGGLE */
 
         const contactToggleBtn =
             document.getElementById('contactToggleBtn');
@@ -1178,26 +1166,6 @@ RESPONSIVE
                 contactToggleBtn.textContent =
                     'Show Contact Info';
             }
-
-        });
-
-        /* =========================================
-        LOAD REVEAL
-        ========================================= */
-
-        window.addEventListener('load', () => {
-
-            document.querySelectorAll('.reveal')
-
-                .forEach((el, index) => {
-
-                    setTimeout(() => {
-
-                        el.classList.add('active');
-
-                    }, index * 120);
-
-                });
 
         });
 
