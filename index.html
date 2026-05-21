@@ -2,15 +2,10 @@
 <html lang="en">
 
 <head>
-    <link rel="icon" type="image/png" href="favicon.png">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
 
     <title>Ruddransh Bhardwaj | Portfolio</title>
-    <meta name="description" content="Ruddransh Bhardwaj Portfolio - AI, ML & Full Stack Developer">
-    <meta name="keywords" content="Ruddransh, Portfolio, AI, ML, Developer">
-    <meta name="author" content="Ruddransh Bhardwaj">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
@@ -22,15 +17,14 @@
             --secondary: #c084fc;
 
             --bg: #050816;
-            --bg2: #0b1023;
 
-            --card: rgba(255, 255, 255, 0.08);
-            --border: rgba(255, 255, 255, 0.12);
+            --card: rgba(15, 23, 42, 0.72);
+
+            --border: rgba(255, 255, 255, 0.08);
 
             --text: #f8fafc;
-            --muted: #cbd5e1;
 
-            --glass: rgba(255, 255, 255, 0.9);
+            --muted: #cbd5e1;
         }
 
         * {
@@ -44,28 +38,53 @@
             scroll-behavior: smooth;
         }
 
+        /* =========================================
+BODY
+========================================= */
+
         body {
-            background: linear-gradient(to bottom, #050816, #0b1023);
+
+            background:
+                linear-gradient(180deg,
+                    #030712 0%,
+                    #050816 40%,
+                    #0b1023 100%);
+
             color: var(--text);
+
             overflow-x: hidden;
+
             position: relative;
+
+            -webkit-font-smoothing: antialiased;
+
+            text-rendering: optimizeLegibility;
         }
 
         /* =========================================
-BACKGROUND ANIMATION
+ANIMATED BACKGROUND
 ========================================= */
 
         body::before {
+
             content: '';
+
             position: fixed;
-            width: 100%;
-            height: 100%;
+
             inset: 0;
 
             background:
-                radial-gradient(circle at 20% 20%, rgba(96, 165, 250, 0.18), transparent 25%),
-                radial-gradient(circle at 80% 30%, rgba(192, 132, 252, 0.16), transparent 25%),
-                radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.05), transparent 25%);
+                radial-gradient(circle at 20% 20%,
+                    rgba(96, 165, 250, 0.12),
+                    transparent 25%),
+
+                radial-gradient(circle at 80% 30%,
+                    rgba(192, 132, 252, 0.10),
+                    transparent 25%),
+
+                radial-gradient(circle at 50% 80%,
+                    rgba(255, 255, 255, 0.03),
+                    transparent 25%);
 
             animation: bgMove 14s infinite alternate ease-in-out;
 
@@ -73,12 +92,13 @@ BACKGROUND ANIMATION
         }
 
         @keyframes bgMove {
+
             0% {
                 transform: scale(1) translateY(0px);
             }
 
             100% {
-                transform: scale(1.08) translateY(-35px);
+                transform: scale(1.05) translateY(-25px);
             }
         }
 
@@ -87,32 +107,47 @@ GLOW EFFECTS
 ========================================= */
 
         .glow {
+
             position: fixed;
+
             border-radius: 50%;
-            filter: blur(120px);
-            opacity: 0.35;
+
+            opacity: 0.12;
+
             z-index: -4;
-            animation: floatGlow 12s infinite alternate ease-in-out;
+
+            pointer-events: none;
+
+            animation:
+                floatGlow 12s infinite alternate ease-in-out;
         }
 
         .glow1 {
-            width: 350px;
-            height: 350px;
-            background: #60a5fa;
-            top: -100px;
-            left: -100px;
+
+            width: 280px;
+            height: 280px;
+
+            background: #2563eb;
+
+            top: -120px;
+            left: -120px;
         }
 
         .glow2 {
-            width: 300px;
-            height: 300px;
-            background: #c084fc;
-            bottom: -100px;
-            right: -80px;
+
+            width: 240px;
+            height: 240px;
+
+            background: #7c3aed;
+
+            bottom: -120px;
+            right: -100px;
+
             animation-delay: 3s;
         }
 
         @keyframes floatGlow {
+
             from {
                 transform: translateY(0px) translateX(0px);
             }
@@ -127,22 +162,32 @@ PARTICLES
 ========================================= */
 
         .particles {
+
             position: fixed;
+
             inset: 0;
+
             overflow: hidden;
+
             z-index: -3;
         }
 
         .particles span {
+
             position: absolute;
+
             display: block;
+
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.55);
+
+            background:
+                rgba(255, 255, 255, 0.45);
 
             animation: particles linear infinite;
         }
 
         @keyframes particles {
+
             from {
                 transform: translateY(100vh) scale(0);
             }
@@ -157,30 +202,43 @@ NAVBAR
 ========================================= */
 
         nav {
+
             position: fixed;
+
             width: 100%;
+
             top: 0;
+
             z-index: 999;
 
             padding: 18px 0;
 
-            background: rgba(5, 8, 22, 0.55);
+            background:
+                rgba(5, 8, 22, 0.72);
 
-            backdrop-filter: blur(16px);
+            backdrop-filter: blur(8px);
 
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            -webkit-backdrop-filter: blur(8px);
+
+            border-bottom:
+                1px solid rgba(255, 255, 255, 0.08);
         }
 
         nav ul {
+
             display: flex;
+
             justify-content: center;
+
             gap: 38px;
 
             list-style: none;
         }
 
         nav a {
+
             text-decoration: none;
+
             color: white;
 
             font-weight: 500;
@@ -191,17 +249,21 @@ NAVBAR
         }
 
         nav a::after {
+
             content: '';
 
             position: absolute;
 
             width: 0%;
+
             height: 2px;
 
             left: 0;
+
             bottom: -5px;
 
-            background: linear-gradient(to right,
+            background:
+                linear-gradient(to right,
                     var(--primary),
                     var(--secondary));
 
@@ -209,23 +271,29 @@ NAVBAR
         }
 
         nav a:hover::after {
+
             width: 100%;
         }
 
         nav a:hover {
+
             color: #d8b4fe;
         }
 
         /* =========================================
-HERO SECTION
+HERO
 ========================================= */
 
         #hero {
+
             min-height: 100vh;
 
             display: flex;
+
             justify-content: center;
+
             align-items: center;
+
             flex-direction: column;
 
             text-align: center;
@@ -236,48 +304,60 @@ HERO SECTION
         }
 
         .hero-content {
+
             animation: heroFade 1.4s ease forwards;
         }
 
         @keyframes heroFade {
+
             from {
+
                 opacity: 0;
+
                 transform: translateY(60px);
             }
 
             to {
+
                 opacity: 1;
+
                 transform: translateY(0px);
             }
         }
 
         #hero h1 {
-            font-size: 5.5rem;
+
+            font-size: 5.3rem;
+
             font-weight: 800;
 
-            background: linear-gradient(to right,
+            line-height: 1.05;
+
+            margin-bottom: 18px;
+
+            background:
+                linear-gradient(to right,
                     #93c5fd,
                     #d8b4fe);
 
             -webkit-background-clip: text;
+
             -webkit-text-fill-color: transparent;
-
-            margin-bottom: 18px;
-
-            line-height: 1.05;
         }
 
         #hero p {
-            max-width: 780px;
+
+            max-width: 760px;
 
             color: var(--muted);
 
-            font-size: 1.25rem;
+            font-size: 1.2rem;
 
-            line-height: 1.8;
+            line-height: 1.9;
         }
 
         .hero-btn {
+
             margin-top: 40px;
         }
 
@@ -286,17 +366,22 @@ BUTTONS
 ========================================= */
 
         button {
+
             padding: 15px 35px;
 
             border: none;
+
             border-radius: 50px;
 
-            background: rgba(255, 255, 255, 0.92);
+            background:
+                rgba(255, 255, 255, 0.92);
 
             color: #111827;
 
             font-size: 1rem;
+
             font-weight: 600;
+
             letter-spacing: 0.3px;
 
             cursor: pointer;
@@ -305,38 +390,40 @@ BUTTONS
 
             backdrop-filter: blur(10px);
 
+            -webkit-backdrop-filter: blur(10px);
+
             box-shadow:
-                0 10px 30px rgba(255, 255, 255, 0.08),
-                inset 0 1px 1px rgba(255, 255, 255, 0.8);
+                0 10px 30px rgba(255, 255, 255, 0.06),
+                inset 0 1px 1px rgba(255, 255, 255, 0.7);
         }
 
         button:hover {
-            transform: translateY(-5px) scale(1.03);
+
+            transform:
+                translateY(-5px) scale(1.03);
 
             background: #ffffff;
 
-            color: #000;
-
             box-shadow:
-                0 15px 35px rgba(255, 255, 255, 0.18),
-                0 0 20px rgba(255, 255, 255, 0.12);
+                0 15px 35px rgba(255, 255, 255, 0.12);
         }
 
         button:active {
+
             transform: scale(0.98);
         }
 
         /* =========================================
-SCROLL DOWN ICON
+SCROLL ICON
 ========================================= */
 
         .scroll-down {
+
             position: absolute;
+
             bottom: 35px;
 
             font-size: 2rem;
-
-            color: white;
 
             animation: bounce 2s infinite;
         }
@@ -358,11 +445,14 @@ SECTIONS
 ========================================= */
 
         .section {
+
             padding: 130px 10%;
+
             position: relative;
         }
 
         .section h2 {
+
             font-size: 2.7rem;
 
             margin-bottom: 55px;
@@ -373,19 +463,23 @@ SECTIONS
         }
 
         .section h2::after {
+
             content: '';
 
             position: absolute;
 
             width: 70%;
+
             height: 4px;
 
             left: 0;
+
             bottom: -12px;
 
             border-radius: 10px;
 
-            background: linear-gradient(to right,
+            background:
+                linear-gradient(to right,
                     var(--primary),
                     var(--secondary));
         }
@@ -395,24 +489,27 @@ LISTS
 ========================================= */
 
         .bullet-list {
+
             list-style: none;
         }
 
         .bullet-list li {
+
             margin-bottom: 18px;
 
             color: var(--muted);
 
             font-size: 1.08rem;
 
+            line-height: 1.8;
+
             position: relative;
 
             padding-left: 30px;
-
-            line-height: 1.8;
         }
 
         .bullet-list li::before {
+
             content: '✦';
 
             position: absolute;
@@ -427,6 +524,7 @@ CARDS
 ========================================= */
 
         .projects-grid {
+
             display: grid;
 
             grid-template-columns:
@@ -437,55 +535,63 @@ CARDS
         }
 
         .card {
+
             position: relative;
 
             overflow: hidden;
 
-            background: rgba(255, 255, 255, 0.07);
+            background: rgba(15, 23, 42, 0.72);
 
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            border:
+                1px solid rgba(255, 255, 255, 0.08);
 
             border-radius: 26px;
 
             padding: 35px;
 
-            backdrop-filter: blur(18px);
+            backdrop-filter: blur(10px);
+
+            -webkit-backdrop-filter: blur(10px);
 
             transition: 0.5s ease;
         }
 
         .card::before {
+
             content: '';
 
             position: absolute;
 
             width: 180px;
+
             height: 180px;
 
             border-radius: 50%;
 
-            background: rgba(255, 255, 255, 0.05);
+            background:
+                rgba(255, 255, 255, 0.03);
 
             top: -70px;
+
             right: -70px;
         }
 
         .card:hover {
+
             transform: translateY(-14px);
 
-            border-color: rgba(255, 255, 255, 0.28);
+            border-color:
+                rgba(255, 255, 255, 0.20);
 
             box-shadow:
-                0 25px 50px rgba(0, 0, 0, 0.4),
-                0 0 40px rgba(255, 255, 255, 0.04);
+                0 25px 50px rgba(0, 0, 0, 0.35);
         }
 
         .card h3 {
+
             font-size: 1.35rem;
 
             margin-bottom: 16px;
-
-            color: white;
         }
 
         /* =========================================
@@ -493,18 +599,23 @@ CONTACT
 ========================================= */
 
         .contact-box {
-            background: rgba(255, 255, 255, 0.07);
 
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(15, 23, 42, 0.72);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.08);
 
             padding: 45px;
 
             border-radius: 28px;
 
-            backdrop-filter: blur(18px);
+            backdrop-filter: blur(10px);
+
+            -webkit-backdrop-filter: blur(10px);
         }
 
         .contact-content {
+
             max-height: 0;
 
             overflow: hidden;
@@ -515,6 +626,7 @@ CONTACT
         }
 
         .contact-content.show {
+
             max-height: 400px;
 
             opacity: 1;
@@ -523,16 +635,21 @@ CONTACT
         }
 
         .contact-buttons {
+
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 22px;
         }
 
         .contact-buttons a {
+
             text-decoration: none;
         }
 
         .contact-btn {
+
             min-width: 190px;
         }
 
@@ -541,6 +658,7 @@ SCROLL REVEAL
 ========================================= */
 
         .reveal {
+
             opacity: 0;
 
             transform: translateY(80px);
@@ -550,8 +668,41 @@ SCROLL REVEAL
         }
 
         .reveal.active {
+
             opacity: 1;
+
             transform: translateY(0px);
+        }
+
+        /* =========================================
+IOS SAFARI FIX
+========================================= */
+
+        @supports (-webkit-touch-callout: none) {
+
+            body {
+
+                background: #050816;
+            }
+
+            body::before {
+
+                opacity: 0.45;
+            }
+
+            .particles {
+
+                opacity: 0.45;
+            }
+
+            .card,
+            .contact-box,
+            nav {
+
+                backdrop-filter: blur(8px);
+
+                -webkit-backdrop-filter: blur(8px);
+            }
         }
 
         /* =========================================
@@ -561,10 +712,12 @@ RESPONSIVE
         @media(max-width:900px) {
 
             #hero h1 {
+
                 font-size: 4rem;
             }
 
             .section {
+
                 padding: 110px 7%;
             }
         }
@@ -572,27 +725,34 @@ RESPONSIVE
         @media(max-width:768px) {
 
             nav ul {
+
                 gap: 18px;
+
                 flex-wrap: wrap;
             }
 
             #hero h1 {
+
                 font-size: 3rem;
             }
 
             #hero p {
+
                 font-size: 1rem;
             }
 
             .section h2 {
+
                 font-size: 2.2rem;
             }
 
             .contact-buttons {
+
                 flex-direction: column;
             }
 
             .contact-btn {
+
                 width: 100%;
             }
         }
@@ -603,6 +763,7 @@ RESPONSIVE
 
     <!-- Glow Effects -->
     <div class="glow glow1"></div>
+
     <div class="glow glow2"></div>
 
     <!-- Particles -->
@@ -612,6 +773,7 @@ RESPONSIVE
     <nav>
 
         <ul>
+
             <li><a href="#hero">Home</a></li>
 
             <li><a href="#about">About</a></li>
@@ -623,6 +785,7 @@ RESPONSIVE
             <li><a href="#experience">Experience</a></li>
 
             <li><a href="#contact">Contact</a></li>
+
         </ul>
 
     </nav>
@@ -646,9 +809,11 @@ RESPONSIVE
             <div class="hero-btn">
 
                 <a href="#projects">
+
                     <button>
                         Explore Portfolio
                     </button>
+
                 </a>
 
             </div>
@@ -883,7 +1048,8 @@ RESPONSIVE
                 Show Contact Info
             </button>
 
-            <div id="contactContent" class="contact-content">
+            <div id="contactContent"
+                class="contact-content">
 
                 <div class="contact-buttons">
 
@@ -895,7 +1061,8 @@ RESPONSIVE
 
                     </a>
 
-                    <a href="https://www.linkedin.com/in/ruddransh-bhardwaj/" target="_blank">
+                    <a href="https://www.linkedin.com/in/ruddransh-bhardwaj/"
+                        target="_blank">
 
                         <button class="contact-btn">
                             LinkedIn
@@ -903,7 +1070,8 @@ RESPONSIVE
 
                     </a>
 
-                    <a href="https://github.com/call-me-ruddra" target="_blank">
+                    <a href="https://github.com/call-me-ruddra"
+                        target="_blank">
 
                         <button class="contact-btn">
                             GitHub
@@ -925,20 +1093,28 @@ RESPONSIVE
         PARTICLES
         ========================================= */
 
-        const particles = document.getElementById('particles');
+        const particles =
+            document.getElementById('particles');
 
-        for (let i = 0; i < 70; i++) {
+        for (let i = 0; i < 65; i++) {
 
-            const particle = document.createElement('span');
+            const particle =
+                document.createElement('span');
 
-            const size = Math.random() * 4 + 1;
+            const size =
+                Math.random() * 4 + 1;
 
-            particle.style.width = `${size}px`;
-            particle.style.height = `${size}px`;
+            particle.style.width =
+                `${size}px`;
 
-            particle.style.left = `${Math.random() * 100}%`;
+            particle.style.height =
+                `${size}px`;
 
-            particle.style.bottom = `-${Math.random() * 100}px`;
+            particle.style.left =
+                `${Math.random() * 100}%`;
+
+            particle.style.bottom =
+                `-${Math.random() * 100}px`;
 
             particle.style.animationDuration =
                 `${Math.random() * 10 + 8}s`;
@@ -989,7 +1165,9 @@ RESPONSIVE
 
             contactContent.classList.toggle('show');
 
-            if (contactContent.classList.contains('show')) {
+            if (
+                contactContent.classList.contains('show')
+            ) {
 
                 contactToggleBtn.textContent =
                     'Hide Contact Info';
@@ -1010,13 +1188,14 @@ RESPONSIVE
         window.addEventListener('load', () => {
 
             document.querySelectorAll('.reveal')
+
                 .forEach((el, index) => {
 
                     setTimeout(() => {
 
                         el.classList.add('active');
 
-                    }, index * 140);
+                    }, index * 120);
 
                 });
 
