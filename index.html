@@ -29,33 +29,23 @@
         rel="stylesheet">
 
     <style>
+
         :root {
 
-            --primary: #93c5fd;
-
-            --secondary: #d8b4fe;
-
+            --primary: #bfdbfe;
+            --secondary: #e9d5ff;
             --bg: #050816;
-
-            --card:
-                rgba(15, 23, 42, 0.72);
-
-            --border:
-                rgba(255, 255, 255, 0.08);
-
+            --card: rgba(15, 23, 42, 0.72);
+            --border: rgba(255, 255, 255, 0.08);
             --text: #f8fafc;
-
             --muted: #cbd5e1;
         }
 
         * {
 
             margin: 0;
-
             padding: 0;
-
             box-sizing: border-box;
-
             font-family: 'Poppins', sans-serif;
         }
 
@@ -73,20 +63,15 @@
                     #0b1023 100%);
 
             color: var(--text);
-
             overflow-x: hidden;
-
             position: relative;
-
             -webkit-font-smoothing: antialiased;
         }
 
         body::before {
 
             content: '';
-
             position: fixed;
-
             inset: 0;
 
             background:
@@ -124,22 +109,16 @@
         .particles {
 
             position: fixed;
-
             inset: 0;
-
             overflow: hidden;
-
             z-index: -4;
         }
 
         .particles span {
 
             position: absolute;
-
             display: block;
-
             border-radius: 50%;
-
             background:
                 rgba(255, 255, 255, 0.35);
 
@@ -167,19 +146,16 @@
         nav {
 
             position: fixed;
-
             width: 100%;
-
             top: 0;
-
             z-index: 999;
-
             padding: 18px 0;
 
             background:
                 rgba(5, 8, 22, 0.75);
 
             backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
 
             border-bottom:
                 1px solid rgba(255, 255, 255, 0.06);
@@ -188,41 +164,28 @@
         nav ul {
 
             display: flex;
-
             justify-content: center;
-
             gap: 35px;
-
             list-style: none;
-
             flex-wrap: wrap;
         }
 
         nav a {
 
             text-decoration: none;
-
             color: white;
-
             font-weight: 500;
-
             position: relative;
-
             transition: 0.3s ease;
         }
 
         nav a::after {
 
             content: '';
-
             position: absolute;
-
             width: 0%;
-
             height: 2px;
-
             left: 0;
-
             bottom: -5px;
 
             background:
@@ -248,15 +211,11 @@
             min-height: 100vh;
 
             display: flex;
-
             justify-content: center;
-
             align-items: center;
-
             flex-direction: column;
 
             text-align: center;
-
             padding: 20px;
         }
 
@@ -288,11 +247,8 @@
         #hero h1 {
 
             font-size: 5rem;
-
             font-weight: 800;
-
             line-height: 1.05;
-
             margin-bottom: 18px;
 
             background:
@@ -301,18 +257,14 @@
                     #e9d5ff);
 
             -webkit-background-clip: text;
-
             -webkit-text-fill-color: transparent;
         }
 
         #hero p {
 
-            max-width: 800px;
-
+            max-width: 850px;
             color: var(--muted);
-
             font-size: 1.2rem;
-
             line-height: 1.9;
         }
 
@@ -321,20 +273,15 @@
             margin-top: 40px;
 
             display: flex;
-
             gap: 20px;
-
             flex-wrap: wrap;
-
             justify-content: center;
         }
 
         button {
 
             padding: 15px 35px;
-
             border: none;
-
             border-radius: 50px;
 
             background:
@@ -343,7 +290,6 @@
             color: #111827;
 
             font-size: 1rem;
-
             font-weight: 600;
 
             cursor: pointer;
@@ -370,11 +316,9 @@
         .section h2 {
 
             font-size: 2.6rem;
-
             margin-bottom: 55px;
 
             position: relative;
-
             display: inline-block;
         }
 
@@ -383,13 +327,10 @@
             content: '';
 
             position: absolute;
-
             width: 70%;
-
             height: 4px;
 
             bottom: -12px;
-
             left: 0;
 
             border-radius: 10px;
@@ -423,6 +364,7 @@
             padding: 35px;
 
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
 
             transition: 0.45s ease;
         }
@@ -442,7 +384,6 @@
         .card h3 {
 
             margin-bottom: 18px;
-
             font-size: 1.3rem;
         }
 
@@ -456,7 +397,6 @@
             position: relative;
 
             padding-left: 28px;
-
             margin-bottom: 16px;
 
             color: var(--muted);
@@ -469,7 +409,6 @@
             content: '✦';
 
             position: absolute;
-
             left: 0;
 
             color: #d8b4fe;
@@ -502,16 +441,13 @@
                 1px solid rgba(255, 255, 255, 0.08);
 
             border-radius: 28px;
-
             padding: 45px;
         }
 
         .contact-content {
 
             max-height: 0;
-
             overflow: hidden;
-
             opacity: 0;
 
             transition: 0.6s ease;
@@ -520,18 +456,14 @@
         .contact-content.show {
 
             max-height: 400px;
-
             opacity: 1;
-
             margin-top: 30px;
         }
 
         .contact-buttons {
 
             display: flex;
-
             gap: 20px;
-
             flex-wrap: wrap;
         }
 
@@ -579,6 +511,7 @@
                 width: 100%;
             }
         }
+
     </style>
 
 </head>
@@ -587,8 +520,6 @@
 
     <div class="particles"
         id="particles"></div>
-
-    <!-- NAVBAR -->
 
     <nav>
 
@@ -613,8 +544,6 @@
         </ul>
 
     </nav>
-
-    <!-- HERO -->
 
     <section id="hero">
 
@@ -658,8 +587,6 @@
 
     </section>
 
-    <!-- ABOUT -->
-
     <section id="about"
         class="section reveal">
 
@@ -683,8 +610,6 @@
 
     </section>
 
-    <!-- EDUCATION -->
-
     <section id="education"
         class="section reveal">
 
@@ -705,7 +630,7 @@
                     </li>
 
                     <li>
-                        2nd Year Student
+                        3rd Year Student
                     </li>
 
                 </ul>
@@ -736,8 +661,6 @@
 
     </section>
 
-    <!-- SKILLS -->
-
     <section id="skills"
         class="section reveal">
 
@@ -754,15 +677,10 @@
                 <ul class="bullet-list">
 
                     <li>Python</li>
-
                     <li>Java</li>
-
                     <li>C++</li>
-
                     <li>C</li>
-
                     <li>JavaScript</li>
-
                     <li>SQL</li>
 
                 </ul>
@@ -778,13 +696,9 @@
                 <ul class="bullet-list">
 
                     <li>HTML5</li>
-
                     <li>CSS3</li>
-
                     <li>React.js</li>
-
                     <li>Node.js</li>
-
                     <li>Responsive Design</li>
 
                 </ul>
@@ -800,11 +714,8 @@
                 <ul class="bullet-list">
 
                     <li>Artificial Intelligence</li>
-
                     <li>Machine Learning</li>
-
                     <li>Data Science</li>
-
                     <li>Data Structures</li>
 
                 </ul>
@@ -814,8 +725,6 @@
         </div>
 
     </section>
-
-    <!-- PROJECTS -->
 
     <section id="projects"
         class="section reveal">
@@ -908,8 +817,6 @@
 
     </section>
 
-    <!-- EXPERIENCE -->
-
     <section id="experience"
         class="section reveal">
 
@@ -937,8 +844,6 @@
 
     </section>
 
-    <!-- ACHIEVEMENTS -->
-
     <section id="achievements"
         class="section reveal">
 
@@ -955,13 +860,9 @@
                 <ul class="bullet-list">
 
                     <li>Python</li>
-
                     <li>Microsoft Azure</li>
-
                     <li>Wix AI</li>
-
                     <li>Excel via Coursera</li>
-
                     <li>Python Basic — HackerRank</li>
 
                 </ul>
@@ -1015,8 +916,6 @@
         </div>
 
     </section>
-
-    <!-- CONTACT -->
 
     <section id="contact"
         class="section reveal">
@@ -1072,8 +971,6 @@
 
     </section>
 
-    <!-- FOOTER -->
-
     <footer>
 
         Crafted with code, creativity & curiosity —
@@ -1082,8 +979,6 @@
     </footer>
 
     <script>
-
-        /* PARTICLES */
 
         const particles =
             document.getElementById('particles');
@@ -1117,12 +1012,10 @@
             particles.appendChild(particle);
         }
 
-        /* SCROLL REVEAL */
-
         const reveals =
             document.querySelectorAll('.reveal');
 
-        window.addEventListener('scroll', () => {
+        function revealOnScroll() {
 
             reveals.forEach((element) => {
 
@@ -1138,10 +1031,12 @@
                 }
 
             });
+        }
 
-        });
+        window.addEventListener('scroll',
+            revealOnScroll);
 
-        /* CONTACT TOGGLE */
+        revealOnScroll();
 
         const contactToggleBtn =
             document.getElementById('contactToggleBtn');
