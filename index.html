@@ -2,36 +2,18 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ruddransh Bhardwaj | AI & Full Stack Developer</title>
+    <meta name="description" content="Portfolio of Ruddransh Bhardwaj — AI, Machine Learning, Data Science & Full Stack Developer." />
+    <meta name="keywords" content="Ruddransh Bhardwaj, AI, ML, Developer, Portfolio, Full Stack, Data Science" />
 
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0" />
-
-    <title>
-        Ruddransh Bhardwaj | AI & Full Stack Developer
-    </title>
-
-    <meta name="description"
-        content="Portfolio of Ruddransh Bhardwaj — AI, Machine Learning, Data Science & Full Stack Developer." />
-
-    <meta name="keywords"
-        content="Ruddransh Bhardwaj, AI, ML, Developer, Portfolio, Full Stack, Data Science" />
-
-    <link rel="preconnect"
-        href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
-
         :root {
-
             --primary: #bfdbfe;
             --secondary: #e9d5ff;
             --bg: #050816;
@@ -42,7 +24,6 @@
         }
 
         * {
-
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -50,18 +31,11 @@
         }
 
         html {
-
             scroll-behavior: smooth;
         }
 
         body {
-
-            background:
-                linear-gradient(180deg,
-                    #030712 0%,
-                    #050816 40%,
-                    #0b1023 100%);
-
+            background: linear-gradient(180deg, #030712 0%, #050816 40%, #0b1023 100%);
             color: var(--text);
             overflow-x: hidden;
             position: relative;
@@ -69,45 +43,26 @@
         }
 
         body::before {
-
             content: '';
             position: fixed;
             inset: 0;
-
             background:
-                radial-gradient(circle at 20% 20%,
-                    rgba(96, 165, 250, 0.12),
-                    transparent 25%),
-
-                radial-gradient(circle at 80% 30%,
-                    rgba(192, 132, 252, 0.10),
-                    transparent 25%);
-
-            animation:
-                bgMove 15s infinite alternate ease-in-out;
-
+                radial-gradient(circle at 20% 20%, rgba(96, 165, 250, 0.12), transparent 25%),
+                radial-gradient(circle at 80% 30%, rgba(192, 132, 252, 0.10), transparent 25%);
+            animation: bgMove 15s infinite alternate ease-in-out;
             z-index: -5;
         }
 
         @keyframes bgMove {
-
             from {
-
-                transform:
-                    scale(1)
-                    translateY(0px);
+                transform: scale(1) translateY(0px);
             }
-
             to {
-
-                transform:
-                    scale(1.06)
-                    translateY(-25px);
+                transform: scale(1.06) translateY(-25px);
             }
         }
 
         .particles {
-
             position: fixed;
             inset: 0;
             overflow: hidden;
@@ -115,54 +70,35 @@
         }
 
         .particles span {
-
             position: absolute;
             display: block;
             border-radius: 50%;
-            background:
-                rgba(255, 255, 255, 0.35);
-
-            animation:
-                particles linear infinite;
+            background: rgba(255, 255, 255, 0.35);
+            animation: particles linear infinite;
         }
 
         @keyframes particles {
-
             from {
-
-                transform:
-                    translateY(100vh)
-                    scale(0);
+                transform: translateY(100vh) scale(0);
             }
-
             to {
-
-                transform:
-                    translateY(-10vh)
-                    scale(1);
+                transform: translateY(-10vh) scale(1);
             }
         }
 
         nav {
-
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 999;
             padding: 18px 0;
-
-            background:
-                rgba(5, 8, 22, 0.75);
-
+            background: rgba(5, 8, 22, 0.75);
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
-
-            border-bottom:
-                1px solid rgba(255, 255, 255, 0.06);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
         }
 
         nav ul {
-
             display: flex;
             justify-content: center;
             gap: 35px;
@@ -171,7 +107,6 @@
         }
 
         nav a {
-
             text-decoration: none;
             color: white;
             font-weight: 500;
@@ -180,89 +115,61 @@
         }
 
         nav a::after {
-
             content: '';
             position: absolute;
             width: 0%;
             height: 2px;
             left: 0;
             bottom: -5px;
-
-            background:
-                linear-gradient(to right,
-                    var(--primary),
-                    var(--secondary));
-
+            background: linear-gradient(to right, var(--primary), var(--secondary));
             transition: 0.35s ease;
         }
 
         nav a:hover::after {
-
             width: 100%;
         }
 
         nav a:hover {
-
             color: #e9d5ff;
         }
 
         #hero {
-
             min-height: 100vh;
-
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-
             text-align: center;
             padding: 20px;
         }
 
         .hero-content {
-
-            animation:
-                heroFade 1.4s ease forwards;
+            animation: heroFade 1.4s ease forwards;
         }
 
         @keyframes heroFade {
-
             from {
-
                 opacity: 0;
-
-                transform:
-                    translateY(60px);
+                transform: translateY(60px);
             }
-
             to {
-
                 opacity: 1;
-
-                transform:
-                    translateY(0px);
+                transform: translateY(0px);
             }
         }
 
         #hero h1 {
-
             font-size: 5rem;
             font-weight: 800;
             line-height: 1.05;
             margin-bottom: 18px;
-
-            background:
-                linear-gradient(to right,
-                    #bfdbfe,
-                    #e9d5ff);
-
+            background: linear-gradient(to right, #bfdbfe, #e9d5ff);
             -webkit-background-clip: text;
-            background-clip: text; /* <-- Add this line to fix the warning */
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         #hero p {
-
             max-width: 850px;
             color: var(--muted);
             font-size: 1.2rem;
@@ -270,9 +177,7 @@
         }
 
         .hero-buttons {
-
             margin-top: 40px;
-
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
@@ -280,793 +185,412 @@
         }
 
         button {
-
             padding: 15px 35px;
             border: none;
             border-radius: 50px;
-
-            background:
-                rgba(255, 255, 255, 0.92);
-
+            background: rgba(255, 255, 255, 0.92);
             color: #111827;
-
             font-size: 1rem;
             font-weight: 600;
-
             cursor: pointer;
-
             transition: 0.35s ease;
-
-            box-shadow:
-                0 10px 25px rgba(255, 255, 255, 0.08);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.08);
         }
 
         button:hover {
-
-            transform:
-                translateY(-5px);
-
+            transform: translateY(-5px);
             background: white;
         }
 
         .section {
-
             padding: 120px 10%;
         }
 
         .section h2 {
-
             font-size: 2.6rem;
             margin-bottom: 55px;
-
             position: relative;
             display: inline-block;
         }
 
         .section h2::after {
-
             content: '';
-
             position: absolute;
             width: 70%;
             height: 4px;
-
             bottom: -12px;
             left: 0;
-
             border-radius: 10px;
-
-            background:
-                linear-gradient(to right,
-                    var(--primary),
-                    var(--secondary));
+            background: linear-gradient(to right, var(--primary), var(--secondary));
         }
 
         .projects-grid {
-
             display: grid;
-
-            grid-template-columns:
-                repeat(auto-fit,
-                    minmax(300px, 1fr));
-
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
 
         .card {
-
             background: var(--card);
-
-            border:
-                1px solid rgba(255, 255, 255, 0.08);
-
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 26px;
-
             padding: 35px;
-
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-
             transition: 0.45s ease;
         }
 
         .card:hover {
-
-            transform:
-                translateY(-12px);
-
-            border-color:
-                rgba(255, 255, 255, 0.20);
-
-            box-shadow:
-                0 20px 40px rgba(0, 0, 0, 0.35);
+            transform: translateY(-12px);
+            border-color: rgba(255, 255, 255, 0.20);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
         }
 
         .card h3 {
-
             margin-bottom: 18px;
             font-size: 1.3rem;
         }
 
         .bullet-list {
-
             list-style: none;
         }
 
         .bullet-list li {
-
             position: relative;
-
             padding-left: 28px;
             margin-bottom: 16px;
-
             color: var(--muted);
-
             line-height: 1.8;
         }
 
         .bullet-list li::before {
-
             content: '✦';
-
             position: absolute;
             left: 0;
-
             color: #d8b4fe;
         }
 
         .reveal {
-
             opacity: 0;
-
-            transform:
-                translateY(80px);
-
-            transition:
-                all 1s cubic-bezier(.17, .55, .55, 1);
+            transform: translateY(80px);
+            transition: all 1s cubic-bezier(.17, .55, .55, 1);
         }
 
         .reveal.active {
-
             opacity: 1;
-
-            transform:
-                translateY(0px);
+            transform: translateY(0px);
         }
 
         .contact-box {
-
             background: var(--card);
-
-            border:
-                1px solid rgba(255, 255, 255, 0.08);
-
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 28px;
             padding: 45px;
         }
 
         .contact-content {
-
             max-height: 0;
             overflow: hidden;
             opacity: 0;
-
             transition: 0.6s ease;
         }
 
         .contact-content.show {
-
             max-height: 400px;
             opacity: 1;
             margin-top: 30px;
         }
 
         .contact-buttons {
-
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
         }
 
         .contact-buttons a {
-
             text-decoration: none;
         }
 
         footer {
-
             text-align: center;
-
             padding: 40px 20px;
-
             color: var(--muted);
-
-            border-top:
-                1px solid rgba(255, 255, 255, 0.06);
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
         }
 
         @media(max-width:768px) {
-
             #hero h1 {
-
                 font-size: 3.2rem;
             }
-
             .section {
-
                 padding: 100px 7%;
             }
-
             .section h2 {
-
                 font-size: 2.1rem;
             }
-
             .contact-buttons {
-
                 flex-direction: column;
             }
-
             button {
-
                 width: 100%;
             }
         }
-
     </style>
-
 </head>
 
 <body>
 
-    <div class="particles"
-        id="particles"></div>
+    <div class="particles" id="particles"></div>
 
     <nav>
-
         <ul>
-
             <li><a href="#hero">Home</a></li>
-
             <li><a href="#about">About</a></li>
-
             <li><a href="#education">Education</a></li>
-
             <li><a href="#skills">Skills</a></li>
-
             <li><a href="#projects">Projects</a></li>
-
             <li><a href="#experience">Experience</a></li>
-
             <li><a href="#achievements">Achievements</a></li>
-
             <li><a href="#contact">Contact</a></li>
-
         </ul>
-
     </nav>
 
     <section id="hero">
-
         <div class="hero-content">
-
-            <h1>
-                Ruddransh Bhardwaj
-            </h1>
-
+            <h1>Ruddransh Bhardwaj</h1>
             <p>
-
                 B.Tech CSE Student |
                 AI & Machine Learning Enthusiast |
                 Full Stack Developer |
                 Data Science Learner
-
             </p>
-
             <div class="hero-buttons">
-
                 <a href="#projects">
-
-                    <button>
-                        Explore Portfolio
-                    </button>
-
+                    <button>Explore Portfolio</button>
                 </a>
-
-                <a href="https://github.com/ruddransh-bhardwaj"
-                    target="_blank">
-
-                    <button>
-                        GitHub Profile
-                    </button>
-
+                <a href="https://github.com/ruddransh-bhardwaj" target="_blank">
+                    <button>GitHub Profile</button>
                 </a>
-
             </div>
-
         </div>
-
     </section>
 
-    <section id="about"
-        class="section reveal">
-
+    <section id="about" class="section reveal">
         <h2>About Me</h2>
-
         <ul class="bullet-list">
-
-            <li>
-                Passionate Computer Science Engineering student focused on Artificial Intelligence, Machine Learning, Data Science, and Full Stack Development.
-            </li>
-
-            <li>
-                Strong interest in solving real-world problems through modern technologies, scalable applications, and intelligent systems.
-            </li>
-
-            <li>
-                Active in development projects, coding challenges, technical communities, and open-source learning.
-            </li>
-
+            <li>Passionate Computer Science Engineering student focused on Artificial Intelligence, Machine Learning, Data Science, and Full Stack Development.</li>
+            <li>Strong interest in solving real-world problems through modern technologies, scalable applications, and intelligent systems.</li>
+            <li>Active in development projects, coding challenges, technical communities, and open-source learning.</li>
         </ul>
-
     </section>
 
-    <section id="education"
-        class="section reveal">
-
+    <section id="education" class="section reveal">
         <h2>Education</h2>
-
         <div class="projects-grid">
-
             <div class="card">
-
-                <h3>
-                    VIT Bhopal University
-                </h3>
-
+                <h3>VIT Bhopal University</h3>
                 <ul class="bullet-list">
-
-                    <li>
-                        B.Tech in Computer Science & Engineering
-                    </li>
-
-                    <li>
-                        3rd Year Student
-                    </li>
-
+                    <li>B.Tech in Computer Science & Engineering</li>
+                    <li>3rd Year Student</li>
                 </ul>
-
             </div>
-
             <div class="card">
-
-                <h3>
-                    Academic Scores
-                </h3>
-
+                <h3>Academic Scores</h3>
                 <ul class="bullet-list">
-
-                    <li>
-                        Class 12 — 75%
-                    </li>
-
-                    <li>
-                        Class 10 — 91.6%
-                    </li>
-
+                    <li>Class 12 — 75%</li>
+                    <li>Class 10 — 91.6%</li>
                 </ul>
-
             </div>
-
         </div>
-
     </section>
 
-    <section id="skills"
-        class="section reveal">
-
+    <section id="skills" class="section reveal">
         <h2>Technical Skills</h2>
-
         <div class="projects-grid">
-
             <div class="card">
-
-                <h3>
-                    Programming Languages
-                </h3>
-
+                <h3>Programming Languages</h3>
                 <ul class="bullet-list">
-
                     <li>Python</li>
                     <li>Java</li>
                     <li>C++</li>
                     <li>C</li>
                     <li>JavaScript</li>
                     <li>SQL</li>
-
                 </ul>
-
             </div>
-
             <div class="card">
-
-                <h3>
-                    Web Development
-                </h3>
-
+                <h3>Web Development</h3>
                 <ul class="bullet-list">
-
                     <li>HTML5</li>
                     <li>CSS3</li>
                     <li>React.js</li>
                     <li>Node.js</li>
                     <li>Responsive Design</li>
-
                 </ul>
-
             </div>
-
             <div class="card">
-
-                <h3>
-                    Core Domains
-                </h3>
-
+                <h3>Core Domains</h3>
                 <ul class="bullet-list">
-
                     <li>Artificial Intelligence</li>
                     <li>Machine Learning</li>
                     <li>Data Science</li>
                     <li>Data Structures</li>
-
                 </ul>
-
             </div>
-
         </div>
-
     </section>
 
-    <section id="projects"
-        class="section reveal">
-
+    <section id="projects" class="section reveal">
         <h2>Projects</h2>
-
         <div class="projects-grid">
-
             <div class="card">
-
-                <h3>
-                    Jarvis — AI Voice Assistant
-                </h3>
-
+                <h3>Jarvis — AI Voice Assistant</h3>
                 <ul class="bullet-list">
-
-                    <li>
-                        Built using Python and NLP.
-                    </li>
-
-                    <li>
-                        Processes voice commands and automates daily tasks.
-                    </li>
-
+                    <li>Built using Python and NLP.</li>
+                    <li>Processes voice commands and automates daily tasks.</li>
                 </ul>
-
             </div>
-
             <div class="card">
-
-                <h3>
-                    Word Lookup Dictionary
-                </h3>
-
+                <h3>Word Lookup Dictionary</h3>
                 <ul class="bullet-list">
-
-                    <li>
-                        Developed using Trie Data Structures and Edit Distance Algorithms.
-                    </li>
-
-                    <li>
-                        Enables fast and efficient word searching.
-                    </li>
-
+                    <li>Developed using Trie Data Structures and Edit Distance Algorithms.</li>
+                    <li>Enables fast and efficient word searching.</li>
                 </ul>
-
             </div>
-
             <div class="card">
-
-                <h3>
-                    Customer Reviews Analytics
-                </h3>
-
+                <h3>AI Product Review Analyzer</h3>
                 <ul class="bullet-list">
-
-                    <li>
-                        Statistical data analytics project studying user feedback.
-                    </li>
-
-                    <li>
-                        Analyzed relationship between reviews and product success.
-                    </li>
-
+                    <li>Analyzes real internet-based product opinions using AI sentiment scoring.</li>
+                    <li>Built with a responsive HTML/CSS/JS frontend and serverless API integration.</li>
                 </ul>
-
+                <div style="margin-top: 25px; display: flex; gap: 15px; flex-wrap: wrap;">
+                    <a href="https://product-review-analyzer-two.vercel.app/" target="_blank">
+                        <button style="padding: 10px 22px; font-size: 0.9rem;">
+                            Try Demo
+                        </button>
+                    </a>
+                    <a href="https://github.com/ruddransh-bhardwaj/product-review-analyzer" target="_blank">
+                        <button style="padding: 10px 22px; font-size: 0.9rem; background: rgba(255,255,255,0.08); color: white; border: 1px solid rgba(255,255,255,0.2);">
+                            GitHub Repo
+                        </button>
+                    </a>
+                </div>
             </div>
-
             <div class="card">
-
-                <h3>
-                    Open Source Audit (OS-linux1)
-                </h3>
-
+                <h3>Open Source Audit (OS-linux1)</h3>
                 <ul class="bullet-list">
-
-                    <li>
-                        Open-source Linux auditing repository hosted on GitHub.
-                    </li>
-
-                    <li>
-                        Focused on collaborative development and system analysis.
-                    </li>
-
+                    <li>Open-source Linux auditing repository hosted on GitHub.</li>
+                    <li>Focused on collaborative development and system analysis.</li>
                 </ul>
-
             </div>
-
         </div>
-
     </section>
 
-    <section id="experience"
-        class="section reveal">
-
+    <section id="experience" class="section reveal">
         <h2>Experience & Internships</h2>
-
         <ul class="bullet-list">
-
-            <li>
-                Python & Web Development Intern — Cognifyz Technologies
-            </li>
-
-            <li>
-                Web Developer Intern — Unstop
-            </li>
-
-            <li>
-                Participant — Google Cloud Arcade 2026 Cohort 1
-            </li>
-
-            <li>
-                Participated in IIT Bombay E-Summit (December 2025)
-            </li>
-
+            <li>Python & Web Development Intern — Cognifyz Technologies</li>
+            <li>Web Developer Intern — Unstop</li>
+            <li>Participant — Google Cloud Arcade 2026 Cohort 1</li>
+            <li>Participated in IIT Bombay E-Summit (December 2025)</li>
         </ul>
-
     </section>
 
-    <section id="achievements"
-        class="section reveal">
-
+    <section id="achievements" class="section reveal">
         <h2>Achievements & Certifications</h2>
-
         <div class="projects-grid">
-
             <div class="card">
-
-                <h3>
-                    Certifications
-                </h3>
-
+                <h3>Certifications</h3>
                 <ul class="bullet-list">
-
                     <li>Python</li>
                     <li>Microsoft Azure</li>
                     <li>Wix AI</li>
                     <li>Excel via Coursera</li>
                     <li>Python Basic — HackerRank</li>
-
                 </ul>
-
             </div>
-
             <div class="card">
-
-                <h3>
-                    Coding & Technical Milestones
-                </h3>
-
+                <h3>Coding & Technical Milestones</h3>
                 <ul class="bullet-list">
-
-                    <li>
-                        Completed 43-Day Coding Challenge on Codeforces
-                    </li>
-
-                    <li>
-                        Active participant in technical communities and coding challenges
-                    </li>
-
+                    <li>Completed 43-Day Coding Challenge on Codeforces</li>
+                    <li>Active participant in technical communities and coding challenges</li>
                 </ul>
-
             </div>
-
             <div class="card">
-
-                <h3>
-                    Sports & Leadership
-                </h3>
-
+                <h3>Sports & Leadership</h3>
                 <ul class="bullet-list">
-
-                    <li>
-                        National-Level Hockey Player
-                    </li>
-
-                    <li>
-                        Regional-Level Football Player
-                    </li>
-
-                    <li>
-                        Rajya Puraskar Awardee — Bharat Scouts & Guides
-                    </li>
-
+                    <li>National-Level Hockey Player</li>
+                    <li>Regional-Level Football Player</li>
+                    <li>Rajya Puraskar Awardee — Bharat Scouts & Guides</li>
                 </ul>
-
             </div>
-
         </div>
-
     </section>
 
-    <section id="contact"
-        class="section reveal">
-
-        <h2>
-            Get In Touch
-        </h2>
-
+    <section id="contact" class="section reveal">
+        <h2>Get In Touch</h2>
         <div class="contact-box">
-
-            <button id="contactToggleBtn">
-
-                Show Contact Info
-
-            </button>
-
-            <div id="contactContent"
-                class="contact-content">
-
+            <button id="contactToggleBtn">Show Contact Info</button>
+            <div id="contactContent" class="contact-content">
                 <div class="contact-buttons">
-
                     <a href="mailto:bhardwajruddransh@gmail.com">
-
-                        <button>
-                            Email Me
-                        </button>
-
+                        <button>Email Me</button>
                     </a>
-
-                    <a href="https://www.linkedin.com/in/ruddransh-bhardwaj/"
-                        target="_blank">
-
-                        <button>
-                            LinkedIn
-                        </button>
-
+                    <a href="https://www.linkedin.com/in/ruddransh-bhardwaj/" target="_blank">
+                        <button>LinkedIn</button>
                     </a>
-
-                    <a href="https://github.com/ruddransh-bhardwaj"
-                        target="_blank">
-
-                        <button>
-                            GitHub
-                        </button>
-
+                    <a href="https://github.com/ruddransh-bhardwaj" target="_blank">
+                        <button>GitHub</button>
                     </a>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
     <footer>
-
-        Crafted with code, creativity & curiosity —
-        Ruddransh Bhardwaj
-
+        Crafted with code, creativity & curiosity — Ruddransh Bhardwaj
     </footer>
 
     <script>
-
-        const particles =
-            document.getElementById('particles');
-
+        const particles = document.getElementById('particles');
         for (let i = 0; i < 60; i++) {
-
-            const particle =
-                document.createElement('span');
-
-            const size =
-                Math.random() * 4 + 1;
-
-            particle.style.width =
-                `${size}px`;
-
-            particle.style.height =
-                `${size}px`;
-
-            particle.style.left =
-                `${Math.random() * 100}%`;
-
-            particle.style.bottom =
-                `-${Math.random() * 100}px`;
-
-            particle.style.animationDuration =
-                `${Math.random() * 10 + 8}s`;
-
-            particle.style.animationDelay =
-                `${Math.random() * 5}s`;
-
+            const particle = document.createElement('span');
+            const size = Math.random() * 4 + 1;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.left = `${Math.random() * 100}%`;
+            particle.style.bottom = `-${Math.random() * 100}px`;
+            particle.style.animationDuration = `${Math.random() * 10 + 8}s`;
+            particle.style.animationDelay = `${Math.random() * 5}s`;
             particles.appendChild(particle);
         }
 
-        const reveals =
-            document.querySelectorAll('.reveal');
-
+        const reveals = document.querySelectorAll('.reveal');
         function revealOnScroll() {
-
             reveals.forEach((element) => {
-
-                const windowHeight =
-                    window.innerHeight;
-
-                const revealTop =
-                    element.getBoundingClientRect().top;
-
+                const windowHeight = window.innerHeight;
+                const revealTop = element.getBoundingClientRect().top;
                 if (revealTop < windowHeight - 100) {
-
                     element.classList.add('active');
                 }
-
             });
         }
 
-        window.addEventListener('scroll',
-            revealOnScroll);
-
+        window.addEventListener('scroll', revealOnScroll);
         revealOnScroll();
 
-        const contactToggleBtn =
-            document.getElementById('contactToggleBtn');
-
-        const contactContent =
-            document.getElementById('contactContent');
+        const contactToggleBtn = document.getElementById('contactToggleBtn');
+        const contactContent = document.getElementById('contactContent');
 
         contactToggleBtn.addEventListener('click', () => {
-
             contactContent.classList.toggle('show');
-
-            if (
-                contactContent.classList.contains('show')
-            ) {
-
-                contactToggleBtn.textContent =
-                    'Hide Contact Info';
+            if (contactContent.classList.contains('show')) {
+                contactToggleBtn.textContent = 'Hide Contact Info';
+            } else {
+                contactToggleBtn.textContent = 'Show Contact Info';
             }
-
-            else {
-
-                contactToggleBtn.textContent =
-                    'Show Contact Info';
-            }
-
         });
-
     </script>
-
 </body>
 
 </html>
