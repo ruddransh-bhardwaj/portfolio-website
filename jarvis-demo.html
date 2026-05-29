@@ -81,54 +81,65 @@ Waiting...
 
 <script>
 
-const btn=document.getElementById("btn");
-const status=document.getElementById("status");
-const response=document.getElementById("response");
+const btn = document.getElementById("btn");
+const status = document.getElementById("status");
+const response = document.getElementById("response");
 
-const SpeechRecognition=
-window.SpeechRecognition||
+const SpeechRecognition =
+window.SpeechRecognition ||
 window.webkitSpeechRecognition;
 
-const recognition=
-new SpeechRecognition();
+const recognition = new SpeechRecognition();
 
-recognition.lang="en-US";
+recognition.lang = "en-US";
+recognition.continuous = false;
+recognition.interimResults = false;
+
+let listening = false;
 
 function speak(text){
-    const speech=
+
+    speechSynthesis.cancel();
+
+    const speech =
     new SpeechSynthesisUtterance(text);
-    speech.rate=1;
+
+    speech.rate = 1;
+    speech.pitch = 1;
+
     speechSynthesis.speak(speech);
 }
 
 function reply(command){
 
-command=command.toLowerCase();
+command = command.toLowerCase();
 
 if(command.includes("youtube")){
     window.open(
-    "https://youtube.com",
-    "_blank");
+        "https://youtube.com",
+        "_blank"
+    );
     return "Opening YouTube";
 }
 
 if(command.includes("google")){
     window.open(
-    "https://google.com",
-    "_blank");
+        "https://google.com",
+        "_blank"
+    );
     return "Opening Google";
 }
 
 if(command.includes("github")){
     window.open(
-    "https://github.com",
-    "_blank");
+        "https://github.com",
+        "_blank"
+    );
     return "Opening GitHub";
 }
 
 if(command.includes("time")){
-    return new Date()
-    .toLocaleTimeString();
+    return new Date().toLocaleTimeString();
 }
 
 if(command.includes("hello")){
@@ -138,28 +149,57 @@ if(command.includes("hello")){
 return "You said " + command;
 }
 
-btn.onclick=()=>{
+btn.onclick = () => {
+
+    if(listening) return;
+
+    listening = true;
+    btn.disabled = true;
+
+    status.innerHTML =
+    "Listening...";
+
     recognition.start();
-    status.innerHTML="Listening...";
-}
+};
 
-recognition.onresult=(e)=>{
+recognition.onresult = (e) => {
 
-const command=
-e.results[0][0]
-.transcript;
+    recognition.stop();
 
-status.innerHTML=
-"You: "+command;
+    const command =
+    e.results[0][0]
+    .transcript
+    .toLowerCase();
 
-const ans=
-reply(command);
+    status.innerHTML =
+    "You: " + command;
 
-response.innerHTML=
-ans;
+    const ans =
+    reply(command);
 
-speak(ans);
-}
+    response.innerHTML =
+    ans;
+
+    speak(ans);
+};
+
+recognition.onend = () => {
+
+    listening = false;
+    btn.disabled = false;
+
+    status.innerHTML +=
+    "<br>Ready";
+};
+
+recognition.onerror = () => {
+
+    listening = false;
+    btn.disabled = false;
+
+    status.innerHTML =
+    "Mic Error";
+};
 
 </script>
 
