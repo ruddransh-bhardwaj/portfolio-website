@@ -78,7 +78,6 @@ Waiting...
 </div>
 
 </div>
-
 <script>
 
 const btn = document.getElementById("btn");
@@ -94,8 +93,10 @@ const recognition = new SpeechRecognition();
 recognition.lang = "en-US";
 recognition.continuous = false;
 recognition.interimResults = false;
+recognition.maxAlternatives = 1;
 
 let listening = false;
+let commandProcessed = false;
 
 function speak(text){
 
@@ -105,14 +106,13 @@ function speak(text){
     new SpeechSynthesisUtterance(text);
 
     speech.rate = 1;
-    speech.pitch = 1;
 
     speechSynthesis.speak(speech);
 }
 
 function reply(command){
 
-command = command.toLowerCase();
+command = command.trim().toLowerCase();
 
 if(command.includes("youtube")){
     window.open(
@@ -139,11 +139,8 @@ if(command.includes("github")){
 }
 
 if(command.includes("time")){
-    return new Date().toLocaleTimeString();
-}
-
-if(command.includes("hello")){
-    return "Hello, I am Jarvis.";
+    return new Date()
+    .toLocaleTimeString();
 }
 
 return "You said " + command;
@@ -154,6 +151,8 @@ btn.onclick = () => {
     if(listening) return;
 
     listening = true;
+    commandProcessed = false;
+
     btn.disabled = true;
 
     status.innerHTML =
@@ -164,12 +163,15 @@ btn.onclick = () => {
 
 recognition.onresult = (e) => {
 
+    if(commandProcessed) return;
+
+    commandProcessed = true;
+
     recognition.stop();
 
     const command =
     e.results[0][0]
-    .transcript
-    .toLowerCase();
+    .transcript;
 
     status.innerHTML =
     "You: " + command;
@@ -187,9 +189,6 @@ recognition.onend = () => {
 
     listening = false;
     btn.disabled = false;
-
-    status.innerHTML +=
-    "<br>Ready";
 };
 
 recognition.onerror = () => {
