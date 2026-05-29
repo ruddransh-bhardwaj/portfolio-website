@@ -143,6 +143,23 @@ if(command.includes("time")){
     .toLocaleTimeString();
 }
 
+if(command.includes("date")){
+    return new Date()
+    .toLocaleDateString();
+}
+
+if(command.includes("hello")){
+    return "Hello there!";
+}
+
+if(command.includes("linkedin")){
+    window.open(
+        "https://linkedin.com",
+        "_blank"
+    );
+    return "Opening LinkedIn";
+}
+
 return "You said " + command;
 }
 
